@@ -25,7 +25,7 @@
 
 </head>
 
-<body class="font-[Roboto]">
+<body class="font-[Roboto] min-w-96">
     <header class="bg-[#2f466aff]">
         <nav class="flex justify-between items-center w-11/12 py-2 md:py-3 lg:py-4 mx-auto max-w-screen-xl">
             <a href="{{ route('home') }}" class="logo-part">

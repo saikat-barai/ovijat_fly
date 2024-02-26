@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\UmrahController;
 use App\Http\Controllers\Frontend\FlagController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Frontend\VisaController;
@@ -30,5 +32,23 @@ Route::get('/flag/display', [FlagController::class, 'flag_display'])->name('flag
 
 
 // backend route start
- 
+Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+
+// umrah route start 
+Route::get('/umrahh', [UmrahController::class, 'umrah'])->name('umrahh');
+Route::get('/umrah/add', [UmrahController::class, 'umrah_add'])->name('umrah.add');
+Route::post('/umrah/store', [UmrahController::class, 'umrah_store'])->name('umrah.store');
+
+// umrah package 
+Route::get('/umrah/package', [UmrahController::class, 'umrah_package'])->name('umrah.package');
+
+
+// umrah duration 
+Route::post('/umrah/duration/store', [UmrahController::class, 'umrah_duration_store'])->name('umrah.duration.store');
+
+
+Route::post('/umrah/package/type/store', [UmrahController::class, 'umrah_package_type_tore'])->name('umrah.package.type.store');
+
+Route::get('/add/umrah', [UmrahController::class, 'add_umrah'])->name('add.umrah');
+// umrah route end
 // backend route end
